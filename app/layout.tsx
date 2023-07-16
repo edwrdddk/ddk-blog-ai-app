@@ -1,21 +1,25 @@
-import './globals.css';
-import { Open_Sans } from 'next/font/google';
+import "./globals.css";
+import { Open_Sans } from "next/font/google";
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'DDK AI Blog',
-  description: 'Next JS built blog with AI',
-}
+  title: "DDK AI Blog",
+  description: "Next JS built blog with AI",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html className={openSans.className} lang="en">
-      <body>{children}</body>
+      <body>
+        {/* <Navbar /> */}
+        {children}
+        {/* <Footer /> */}
+      </body>
     </html>
-  )
+  );
 }
