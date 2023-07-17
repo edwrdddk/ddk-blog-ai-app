@@ -15,6 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html className={openSans.className} lang="en">
+      <head>
+        <link rel="icon" href="robot.ico" />
+      </head>
       <body>
         {/* <Navbar /> */}
         {children}
