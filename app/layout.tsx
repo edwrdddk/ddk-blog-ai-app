@@ -1,11 +1,13 @@
 import "./globals.css";
 import { Open_Sans } from "next/font/google";
-
+import Navbar from "app/(shared)/Navbar";
+  
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata = {
   title: "DDK AI Blog",
   description: "Next JS built blog with AI",
+
 };
 
 export default function RootLayout({
@@ -15,11 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html className={openSans.className} lang="en">
-      <head>
-        <link rel="icon" href="robot.ico" />
-      </head>
       <body>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         {/* <Footer /> */}
       </body>
