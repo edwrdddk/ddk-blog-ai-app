@@ -53,12 +53,17 @@ const Trending = (props: Props) => {
       </div> */}
 
       {/* option w/ grid */}
-      <div className="sm: grid gap-5 grid-cols-4 grid-rows-2 sm:h-[520px] my-3">
-        <TrendingCard className="col-span-2 row-span-2 bg-wh-500"></TrendingCard>
-        <TrendingCard className="col-span-2 row-span-1 bg-wh-500"></TrendingCard>
-        <TrendingCard className="col-span-1 row-span-1 bg-wh-500"></TrendingCard>
-        <TrendingCard className="col-span-1 row-span-1 bg-wh-500"></TrendingCard>
+      <div className="sm:grid gap-5 grid-cols-4 grid-rows-2 sm:h-[520px] my-3">
+        <TrendingCard className="col-span-2 row-span-2 bg-wh-500" />
+        <TrendingCard className="col-span-2 row-span-1 bg-wh-500" />
+        <TrendingCard className="col-span-1 row-span-1 bg-wh-500" />
+        <TrendingCard className="col-span-1 row-span-1 bg-wh-500" />
       </div>
+      <p className="text-sm">
+        Aenean imperdiet mollis diam non elementum. Etiam condimentum arcu vel
+        metus blandit consequat. Donec eu orci tempor, dictum enim vitae,
+        vestibulum iaculis dui mauris.
+      </p>
     </section>
   );
 };
