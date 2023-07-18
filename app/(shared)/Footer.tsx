@@ -20,14 +20,12 @@ const Footer = () => {
           <p className="my-5">Aenean risus tortor</p>
           <p className="my-5">Dictum a libero ut</p>
           <p>Aliquet faucibus felis</p>
-          <p>©DDK All Rights Reserved.</p>
         </div>
         {/* COLUMN 3 */}
         <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Contact Us</h4>
           <p className="my-5">Sed pretium enim lorem vel commodo.</p>
           <p>(333)000-3330</p>
-          <p>©DDK All Rights Reserved.</p>
         </div>
       </div>
     </footer>
