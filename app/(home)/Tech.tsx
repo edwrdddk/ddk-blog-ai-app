@@ -13,6 +13,16 @@ const Tech = (props: Props) => {
         </h4>
         <p className="font-bold text-2xl">Latest News in Tech</p>
       </div>
+
+      {/* option w/ flex */}
+      <div className="flex justify-between items-center gap-5">
+        <div className="bg-wh-500 h-96 basis-1/2"></div>
+        <div className="flex flex-col gap-3 h-96 basis-1/2">
+          <div className="bg-wh-500 basis-1/3"></div>
+          <div className="bg-wh-500 basis-1/3"></div>
+          <div className="bg-wh-500 basis-1/3"></div>
+        </div>
+      </div>
     </section>
   )
 }
