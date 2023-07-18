@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Tech = (props: Props) => {
   return (
@@ -15,16 +15,24 @@ const Tech = (props: Props) => {
       </div>
 
       {/* option w/ flex */}
-      <div className="flex justify-between items-center gap-5">
+      {/* <div className="flex justify-between items-center gap-5">
         <div className="bg-wh-500 h-96 basis-1/2"></div>
         <div className="flex flex-col gap-3 h-96 basis-1/2">
           <div className="bg-wh-500 basis-1/3"></div>
           <div className="bg-wh-500 basis-1/3"></div>
           <div className="bg-wh-500 basis-1/3"></div>
         </div>
+      </div> */}
+
+      {/* option w/ grid */}
+      <div className="grid grid-cols-2 grid-rows-3 gap-x-5 gap-y-3 h-96 my-5">
+        <div className="bg-wh-500 col-span-1 row-span-3"></div>
+        <div className="bg-wh-500 col-span-1 row-span-1"></div>
+        <div className="bg-wh-500 col-span-1 row-span-1"></div>
+        <div className="bg-wh-500 col-span-1 row-span-1"></div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Tech
+export default Tech;
