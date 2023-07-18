@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <main>
-      main page
+    <main className="px-10 leading-7">
+      
     </main>
   )
 }
