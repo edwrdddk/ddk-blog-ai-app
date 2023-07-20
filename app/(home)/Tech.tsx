@@ -25,7 +25,7 @@ const Tech = (props: Props) => {
       </div> */}
 
       {/* option w/ grid */}
-      <div className="grid grid-cols-2 grid-rows-3 gap-x-5 gap-y-3 h-96 my-5">
+      <div className="sm:grid grid-cols-2 grid-rows-3 gap-x-8 gap-y-8 my-5">
         <div className="bg-wh-500 col-span-1 row-span-3"></div>
         <div className="bg-wh-500 col-span-1 row-span-1"></div>
         <div className="bg-wh-500 col-span-1 row-span-1"></div>
