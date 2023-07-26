@@ -5,7 +5,7 @@ type Props = {};
 
 const Other = (props: Props) => {
   return (
-    <section className="mt-10">
+    <section className="pt-4 mb-16">
       <hr className="border-1" />
       {/* HEADER */}
       <p className="font-bold text-2xl my-8">Other Tranding Posts</p>
