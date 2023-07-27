@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
       <div className="flex justify-between gap-8 mt-5 mb-4 mx-10">
         <div className="basis-2/3 md:mt-3">
           <h1 className="font-bold text-3xl md:text-5xl">
-            DDK SI-FI & AI BLOG
+            DDK ART & AI BLOG
           </h1>
           <p className="text-sm mt-3">
             Vestibulum tincidunt amet, consectetur adipiscing elit by
