@@ -5,23 +5,49 @@ import Other from "@/app/(shared)/Other";
 import Subscribe from "@/app/(shared)/Subscribe";
 import Sidebar from "@/app/(shared)/Sidebar";
 import { prisma } from "app/api/client";
+import { Post } from "@prisma/client";
+
+export const revalidate = 60;
 
 const getPosts = async () => {
   const posts = await prisma.post.findMany();
-
   return posts;
-}
+};
 
 export default async function Home() {
   const posts = await getPosts();
   // console.log(posts);
 
+  const formatPost = () => {
+    const trandingPosts: Array<Post> = [];
+    const techPosts: Array<Post> = [];
+    const travelPosts: Array<Post> = [];
+    const otherPosts: Array<Post> = [];
+
+    posts.forEach((post: Post, i: number) => {
+      if (i < 4) {
+        trandingPosts.push(post);
+      }
+      if (post?.category === "Tech") {
+        techPosts.push(post);
+      } else if (post?.category === "Travel") {
+        travelPosts.push(post);
+      } else if (post?.category === "Interior Design") {
+        otherPosts.push(post);
+      }
+    });
+
+    return [trandingPosts, techPosts, travelPosts, otherPosts];
+  };
+
+  const [trandingPosts, techPosts, travelPosts, otherPosts] = formatPost(); //destructuring
+
   return (
     <main className="px-10 leading-7">
-      <Trending />
+      <Trending trendingPosts={trandingPosts} />
       <div className="md:flex gap-10 mb-5">
         <div className="basis-3/4">
-          <Tech />
+          <Tech techPosts={techPosts}/>
           <Travel />
           <Other />
           <div className="hidden md:block">
@@ -33,5 +59,5 @@ export default async function Home() {
         </div>
       </div>
     </main>
-  )
+  );
 }
