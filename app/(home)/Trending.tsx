@@ -18,6 +18,7 @@ const TrendingCard = ({ className, post }: TrendingCardProps) => {
         <Image
           fill
           alt="tech"
+          placeholder="blur"
           src={post?.image}
           style={{ objectFit: "cover" }}
         />
