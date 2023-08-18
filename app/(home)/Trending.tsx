@@ -70,19 +70,19 @@ const Trending = ({ trendingPosts }: Props) => {
       {/* option w/ grid */}
       <div className="sm:grid gap-5 grid-cols-4 grid-rows-2 sm:h-[520px] my-3">
         <TrendingCard
-          className="col-span-2 row-span-2 bg-wh-500"
+          className="col-span-2 row-span-2"
           post={trendingPosts[0]}
         />
         <TrendingCard
-          className="col-span-2 row-span-1 bg-wh-500"
+          className="col-span-2 row-span-1"
           post={trendingPosts[1]}
         />
         <TrendingCard
-          className="col-span-1 row-span-1 bg-wh-500"
+          className="col-span-1 row-span-1"
           post={trendingPosts[2]}
         />
         <TrendingCard
-          className="col-span-1 row-span-1 bg-wh-500"
+          className="col-span-1 row-span-1"
           post={trendingPosts[3]}
         />
       </div>
