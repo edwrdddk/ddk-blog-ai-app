@@ -18,6 +18,8 @@ const Content = ({ post }: Props) => {
   const [contentError, setContentError] = useState<string>("");
   // const [tempContent, setTempContent] = useState<string>(content);
 
+  const handleSubmit = () => {};
+
   return (
     <div className="prose w-full max-w-full mb-10">
       {/* BREADCRUMBS */}
@@ -42,6 +44,28 @@ const Content = ({ post }: Props) => {
           )}
         </div>
       </div>
+
+      <form onSubmit={handleSubmit}>
+        {/* HEADER */}
+        <>
+          {isEditable ? (
+            <div>
+              <textarea
+                className="border-2 rounded-md bg-wh-50 p-3 w-full"
+                placeholder="Title"
+                onChange={(e) => console.log("change title", e.target.value)}
+                value={title}
+              />
+            </div>
+          ) : (
+            <h3 className="font-bold text-3xl mt-3">{title}</h3>
+          )}
+          <div className="flex gap-3">
+            <h5 className="font-semibold text-xs">By {post.author}</h5>
+            <h6 className="text-wh-300 text-xs">{post.createdAt}</h6>
+          </div>
+        </>
+      </form>
     </div>
   );
 };
