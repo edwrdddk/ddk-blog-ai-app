@@ -3,6 +3,7 @@ import { FormattedPost } from "@/app/types";
 import { XMarkIcon, PencilSquareIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
 import Image from "next/image";
+import SocialLinks from "@/app/(shared)/SocialLinks";
 
 type Props = {
   post: FormattedPost;
@@ -93,6 +94,11 @@ const Content = ({ post }: Props) => {
           </div>
         )}
       </form>
+
+      {/* SOCIAL LINKS */}
+      <div className="hidden md:block mt-10 w-1/3">
+        <SocialLinks isDark />
+      </div>
     </div>
   );
 };
